@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<title>Monte Carlo Drawdown — Freire</title>
+		
+		
+
+		<link rel="stylesheet" href="/css/main.css" />
+		<link rel="stylesheet" href="/css/dark-mode.css">
+		<script src="https://kit.fontawesome.com/de688c0067.js" crossorigin="anonymous"></script>
+		<script src="/js/scroll.js"></script>
+		
+
+		<meta name="keywords" content=""/>
+		<meta charset="utf-8">
+
+		<link rel="shortcut icon" type="image/png" href="/img/ffrak.svg"/>
+
+
+		<meta content="Freire" />
+
+		
+		  
+
+
+
+
+
+
+		
+
+
+		
+		<meta content="Monte Carlo Drawdown"  />
+		
+
+		
+		<meta content="article" />
+		
+
+		
+		<meta content="wherein I estimate some drawdown." />
+		<meta property="twitter:description" content="wherein I estimate some drawdown." />
+		<meta content="wherein I estimate some drawdown."  />
+		
+
+		
+		<meta content="http://localhost:4000/2019/12/15/monte-carlo-drawdown/" />
+		
+
+		
+		<meta content="http://localhost:4000/contact" property="article:author" />
+
+
+		
+
+		<meta name="author" content="Rene Freire" />
+
+		
+		
+		
+		
+
+		<style>
+	  		#darkSwitch { display: none; }
+
+	  		.pull-left { float: left!important; }
+
+	  		.pull-right { float: right!important; }
+
+	  		#title { margin: 0 0 0rem 0; }
+
+  			i.fab:hover {
+   				 color: #5183f5;
+  			}
+
+  			.dark  i.fab:hover {
+   				 color: #ffd479;
+  			}
+
+		</style>
+
+
+
+	</head>
+	<body>
+			<div class="___gatsby">
+				<div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper">
+					
+			<nav class="nav">
+                <div class="nav-container" id="navbar">
+                    <div class="brand">
+                        <a aria-current="page" class="" href="/">
+                             <h1 id="title">Freire</h1>
+                        </a>
+                    </div>
+                    <div class="links">
+                        <a href="/blog/">Articles</a>
+                        <a href="/contact/">Contact</a>
+                    </div>
+                    <div class="cta">
+							<input type="checkbox" id="darkSwitch">
+							<label for="darkSwitch">
+  									<img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTI4IDEyODsiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogIDxwYXRoIGQ9Ik0xMDUuODcsMTQuOTljLTMuNzQtMy4zOS03LjkxLTYuMzgtMTIuNDItOC44OWMtMC44Ny0wLjQ5LTItMC4zNS0yLjcxLDAuMzMgYy0wLjcxLDAuNjgtMC44MywxLjczLTAuMjksMi41M2MxNS42MywyMi45MywxMi4yOSw1Mi41Mi04LjExLDcxLjk3Yy0xMS45LDExLjM1LTI3Ljg1LDE3LjYtNDQuOTEsMTcuNiBjLTExLjM5LDAtMjIuNTQtMi44Ni0zMi4yNC04LjI3Yy0wLjg3LTAuNDktMi0wLjM2LTIuNzEsMC4zM2MtMC43MSwwLjY4LTAuODMsMS43Mi0wLjI4LDIuNTNjMi44MSw0LjEyLDYuMTIsNy45Myw5Ljg2LDExLjMyIGMxMi42MSwxMS40NSwyOS4yNywxNy43Niw0Ni45LDE3Ljc2YzE4LjI3LDAsMzUuMzQtNi43LDQ4LjA5LTE4Ljg2YzEyLjUzLTExLjk0LDE5LjMxLTI3LjcxLDE5LjA5LTQ0LjQgQzEyNS45Miw0Mi4yNSwxMTguNzIsMjYuNjQsMTA1Ljg3LDE0Ljk5eiIgc3R5bGU9ImZpbGw6I0ZDQzIxQjsiLz4KPC9zdmc+" class="theme-icon" />
+							</label>   
+                        <script src="/js/dark-mode-switch.min.js"></script>
+                    </div>
+                </div>
+            </nav>
+
+
+
+<main id="main-content">
+                <div class="container">
+                    <div>
+                        <div class="elevator">
+				<div id="post">
+
+	
+
+	
+
+	<div class="page">
+		<h2>Monte Carlo Drawdown</h2>
+
+		<p>So, the other day I was messing around with the returns of something and I wanted to see if, with the basic statistics of the returns, what are the risks implicit (at least the ones I can reasonably see).</p>
+
+<p>Since I’m a naive fellow, I wrote a very naive program in Python that uses Monte Carlo to estimate the mean drawdown I’d suffer and the maximum drawdown.</p>
+
+<p>First, from the empirical results I extract some statistics: the win rate <code class="highlighter-rouge">winrate</code>, which is the probability of a positive return and the return to risk <code class="highlighter-rouge">rr</code>, which measures how much I win for every loss, on average.</p>
+
+<p>With these I generate (pseudo)random numbers (on a normal distribution; I know, naive). If the number is up to <code class="highlighter-rouge">winrate</code>, I win; otherwise I lose. If I do this a many number of times (say, a thousand) I’ll have a (thousand) series of outcomes. From these I extract the mean drawdown and the maximum drawdown.</p>
+
+<p>The jupyter notebook can be found <a href="https://github.com/freirerene/montecarlodd">here</a>. The code is below:</p>
+
+<p>First I load the libraries I need and read the file with the empirical results; I do some visualisation and so on.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">file_data</span> <span class="o">=</span> <span class="err">“</span><span class="n">trades2</span><span class="o">.</span><span class="n">csv</span><span class="err">”</span>
+<span class="n">trades</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_data</span><span class="p">)</span>
+
+<span class="n">cumulativo</span> <span class="o">=</span> <span class="n">trades</span><span class="o">.</span><span class="n">results</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cumulativo</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="/img/trades.png" alt="" /></p>
+
+<p>Then I find out the basic assumptions of this strategy:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">loss</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">trades</span><span class="o">.</span><span class="n">results</span><span class="p">)))</span>
+<span class="n">gain</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="n">trades</span><span class="o">.</span><span class="n">results</span><span class="p">)))</span>
+
+<span class="n">winrate</span> <span class="o">=</span> <span class="nb">round</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">gain</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">gain</span><span class="p">)</span><span class="o">+</span><span class="nb">len</span><span class="p">(</span><span class="n">loss</span><span class="p">))),</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">lossrate</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">winrate</span>
+
+<span class="n">rr</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="o">-</span><span class="n">gain</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">/</span><span class="n">loss</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>And here is where I generate the possible results (notice I normalize the possible outcome: so the loss is -1 and the gain is <code class="highlighter-rouge">rr</code>)</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">montecarlo</span> <span class="o">=</span> <span class="p">[[</span><span class="n">rr</span> <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">trades</span><span class="p">))[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">winrate</span> <span class="k">else</span> <span class="o">-</span><span class="mi">1</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">trades</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1000</span><span class="p">)]</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">montecarlo</span><span class="p">)</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="err">‘</span><span class="c1">#000000’)
+</span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(),</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><img src="/img/montecarlo.png" alt="" /></p>
+
+<p>The calculation of the drawdown is pretty simple:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">drawdown</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span> <span class="o">-</span> <span class="n">result</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span><span class="o">.</span><span class="n">cummax</span><span class="p">()</span>
+<span class="n">maxdd</span> <span class="o">=</span> <span class="o">-</span><span class="n">drawdown</span><span class="o">.</span><span class="nb">min</span><span class="p">()</span>
+
+<span class="c1"># mean drawdown
+</span><span class="n">maxdd</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="c1"># maximum drawdown I take to be the one that occurs 5% of the cases
+</span><span class="n">maxdd</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">.95</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Mean DD is about 11 and maximum DD is about 19. One might say this is not a good strategy, but one has to consider other factors as well.</p>
+
+
+	<div> 
+		<div>&nbsp;</div> 
+		<div class="pull-left"> 
+			 
+			<a href="/2019/12/08/right-wing-aesthetics/" title="Previous Post: 
+				Right-wing Aesthetics"><i class="fas fa-arrow-circle-left"></i> Right-wing Aesthetics</a> 
+			 
+		</div> 
+
+		<div class="pull-right"> 
+			 
+			<a href="/2019/12/22/on-magic-TV/" title="next Post: 
+				On Magic TV">On Magic TV  <i class="fas fa-arrow-circle-right"></i></a> 
+			 
+		</div> 
+		<div>&nbsp;</div> 
+	</div> 
+
+	<div id="footer" >
+		<div class="pull-right">
+			<span>[
+  
+    
+    
+    <a href="/tag/🐍">🐍&nbsp;</a>
+  
+    
+    
+    <a href="/tag/💰">💰&nbsp;</a>
+  
+]</span>
+		</div>
+		Published by 
+		<span itemprop="author">
+			Rene Freire
+		</span>
+		— 
+		<time datetime="2019-12-15T06:00:00-03:00">15 Dec 2019</time>
+	</div>
+	</div>
+
+</div>
+
+			</div>
+		</div>
+	</div>
+
+
+</main>
+<footer class="footer container"><div>
+	<a href="https://twitter.com/rene__f" title="Twitter"><i class="fab fa-twitter fa-lg"></i></a>
+
+	<a href="https://github.com/freirerene" title="Github"><i class="fab fa-github fa-lg"></i></a>
+
+	<a href="http://www.linkedin.com/in/freire00" title="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a>
+
+				</div></footer>
+			
+
+
+
+		</div>
+
+	</body>
+</html>

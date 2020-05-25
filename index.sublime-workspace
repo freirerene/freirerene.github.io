@@ -1,0 +1,424 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"date",
+				"datetime"
+			],
+			[
+				"gam",
+				"gamePlaying"
+			],
+			[
+				"sco",
+				"scores"
+			],
+			[
+				"acti",
+				"activePlayer"
+			],
+			[
+				"act",
+				"activePlayer"
+			],
+			[
+				"nex",
+				"nextPlayer"
+			],
+			[
+				"dice",
+				"diceDOM"
+			],
+			[
+				"round",
+				"roundScore"
+			],
+			[
+				"rou",
+				"roundScore"
+			],
+			[
+				"scor",
+				"scoreGlobal"
+			],
+			[
+				"cal",
+				"calcbmi_obj"
+			],
+			[
+				"john",
+				"john"
+			],
+			[
+				"contra",
+				"contrato_ibov"
+			],
+			[
+				"contr",
+				"contrato_ibov"
+			],
+			[
+				"high",
+				"high_br"
+			],
+			[
+				"backgr",
+				"background-color\tproperty"
+			],
+			[
+				"Close",
+				"Close_1"
+			],
+			[
+				"BB_",
+				"BB_up"
+			],
+			[
+				"BB",
+				"BB_down"
+			],
+			[
+				"bB",
+				"BB_up"
+			],
+			[
+				"Chec",
+				"CheckForClose"
+			],
+			[
+				"ADX",
+				"ADX_main"
+			],
+			[
+				"handle",
+				"handle_media"
+			],
+			[
+				"ADX_n",
+				"ADX_n"
+			],
+			[
+				"hi",
+				"high_2"
+			],
+			[
+				"low",
+				"low_2"
+			],
+			[
+				"TEMPO",
+				"TEMPO_MENOR"
+			],
+			[
+				"STOC",
+				"STOCH_D"
+			],
+			[
+				"STOCH",
+				"STOCH_K"
+			],
+			[
+				"STO",
+				"STOCH_D"
+			],
+			[
+				"hand",
+				"handle_stoch"
+			],
+			[
+				"MEDI",
+				"MEDIA_ATR"
+			],
+			[
+				"peri",
+				"periodo_T"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/rene/Desktop/ordner/freirerene.github.io-master/tan/src/styles/main.scss",
+		"/Users/rene/Desktop/ordner/freirerene.github.io-master/index.html",
+		"/Users/rene/taniarascia.com-master/data/SiteConfig.js",
+		"/Users/rene/taniarascia.com-master/jsconfig.json",
+		"/Users/rene/taniarascia.com-master/netlify.toml",
+		"/Users/rene/taniarascia.com-master/gatsby-browser.js",
+		"/Users/rene/taniarascia.com-master/gatsby-node.js",
+		"/Users/rene/taniarascia.com-master/gatsby-config.js",
+		"/Users/rene/taniarascia.com-master/src/layout/index.js",
+		"/Users/rene/taniarascia.com-master/src/styles/components/buttons.scss",
+		"/Users/rene/python/boten-anna/boten-anna.py",
+		"/Users/rene/taniarascia.com-master/src/styles/main.scss",
+		"/Users/rene/taniarascia.com-master/src/styles/base/mixins.scss",
+		"/Users/rene/taniarascia.com-master/src/styles/base/reset.scss",
+		"/Users/rene/taniarascia.com-master/src/styles/components/layout.scss",
+		"/Users/rene/python/ig-bot/ig-bot2.py",
+		"/Users/rene/python/boten anna/boten-anna.py",
+		"/Users/rene/python/boten anna/email-test.py",
+		"/Users/rene/javascript/starter/style.css",
+		"/Users/rene/javascript/starter/index.html",
+		"/Users/rene/javascript/starter/app.js",
+		"/Users/rene/javascript/complete-javascript-course-master/4-DOM-pig-game/final/app.js",
+		"/Users/rene/Downloads/goodreads_quotes-0.1.0/goodreads_quotes/__init__.py",
+		"/Users/rene/javascript/app.js",
+		"/Users/rene/javascript/object_function.js",
+		"/Users/rene/javascript/index.html",
+		"/Users/rene/Downloads/taniarascia.com-master/src/pages/index.js",
+		"/Users/rene/Downloads/taniarascia.com-master/data/SiteConfig.js",
+		"/Users/rene/Downloads/taniarascia.com-master/gatsby-node.js",
+		"/Users/rene/Downloads/taniarascia.com-master/jsconfig.json",
+		"/Users/rene/Downloads/taniarascia.com-master/package.json",
+		"/Users/rene/Downloads/taniarascia.com-master/gatsby-browser.js",
+		"/Users/rene/Downloads/taniarascia.com-master/gatsby-config.js",
+		"/Users/rene/Downloads/taniarascia.com-master/src/templates/page.js",
+		"/Users/rene/Downloads/taniarascia.com-master/src/pages/blog.js",
+		"/Users/rene/Downloads/taniarascia.com-master/src/context/ThemeContext.js",
+		"/Users/rene/Downloads/taniarascia.com-master/src/components/UserInfo.js",
+		"/Users/rene/Downloads/taniarascia.com-master/src/components/SEO.js",
+		"/Users/rene/Downloads/taniarascia.com-master/src/components/PostListing.js",
+		"/Users/rene/Downloads/taniarascia.com-master/src/components/NewsletterForm.js",
+		"/Users/rene/Downloads/taniarascia.com-master/src/components/Navigation.js",
+		"/Users/rene/Downloads/taniarascia.com-master/src/layout/index.js",
+		"/Users/rene/Downloads/taniarascia.com-master/data/speaking.js",
+		"/Users/rene/Downloads/taniarascia.com-master/data/quotes.js",
+		"/Users/rene/Downloads/taniarascia.com-master/data/publications.js",
+		"/Users/rene/Downloads/taniarascia.com-master/data/projects.js",
+		"/Users/rene/Downloads/taniarascia.com-master/data/podcasts.js",
+		"/Users/rene/Desktop/ordner/FreireCapital/jobju/style.css",
+		"/Users/rene/python/boten anna/digestor-bot.py",
+		"/Users/rene/Desktop/ordner/FreireCapital/jobju/index.html",
+		"/Users/rene/python/boten anna/test",
+		"/Users/rene/python/boten anna/email.py",
+		"/Users/rene/python/ig-bot/ig-bot.py",
+		"/Users/rene/python/digestor-bot.py",
+		"/Users/rene/python/ig-bot/venv/ig-bot.py",
+		"/Users/rene/Downloads/nubank-2020-04.csv",
+		"/Users/rene/Downloads/nubank-2020-03.csv",
+		"/Users/rene/Downloads/nubank-2020-02.csv",
+		"/Users/rene/Downloads/nubank-2020-01.csv",
+		"/Users/rene/Desktop/ordner/FreireCapital/QUANT/Python Codes and Data/genhurst_UnitTest.py",
+		"/Users/rene/Desktop/ordner/FreireCapital/QUANT/Python Codes and Data/calendarSpdsMeanReversion.py",
+		"/Users/rene/Desktop/ordner/FreireCapital/QUANT/Python Codes and Data/cointegrationTests.py",
+		"/Users/rene/Desktop/ordner/textos/0-tese/times new roman/tese.tex",
+		"/Users/rene/Desktop/ordner/textos/0-tese/times new roman/tese.aux",
+		"/Users/rene/Desktop/ordner/textos/0-tese/times new roman/common.bib",
+		"/Users/rene/Desktop/ordner/textos/0-tese/times new roman/atual 11.4",
+		"/Users/rene/Desktop/ordner/textos/0-tese/times new roman/tese - h com gama e beta",
+		"/Users/rene/Desktop/ordner/textos/0-tese/times new roman/tese.bbl",
+		"/Users/rene/Desktop/ordner/textos/0-tese/times new roman/yk repulsivo",
+		"/Users/rene/Downloads/Statistical_Mechanics.bibtex",
+		"/Users/rene/Desktop/ordner/scola/0-tese/times new roman/parte quantica",
+		"/Users/rene/Desktop/ordner/scola/0-tese/times new roman/tese - h com gama e beta",
+		"/Users/rene/Desktop/ordner/scola/0-tese/times new roman/tese - h sem gama e beta",
+		"/Users/rene/Desktop/ordner/freirerene.github.io-master/css/main.css",
+		"/Users/rene/Desktop/ordner/1-textos/0-tese/times new roman/common.bib",
+		"/Users/rene/Desktop/ordner/My Clippings.txt",
+		"/Users/rene/Desktop/ordner/freirerene.github.io-master/css/main.min.css",
+		"/Users/rene/Desktop/ordner/FreireCapital/QUANT/Python Codes and Data/genhurst.py",
+		"/Users/rene/Downloads/RMI EA V7 (demo only)/EA Files/Manage_Account_Profit_RMI.mq4",
+		"/Users/rene/Desktop/ordner/FreireCapital/MT5/dt_oscillator.mq5",
+		"/Users/rene/Desktop/ordner/FreireCapital/QUANT/Algos/MT5/6. SanSalvatore/sansalvatore.cpp",
+		"/Users/rene/Desktop/ordner/FreireCapital/QUANT/Algos/MT5/5. Lindenberg/lindenberg.cpp",
+		"/Users/rene/Desktop/ordner/FreireCapital/QUANT/Algos/MT5/4. Stierenberg/stierenberg.cpp",
+		"/Users/rene/Desktop/ordner/FreireCapital/QUANT/Python Codes and Data/KF_beta_EWA_EWC.py",
+		"/Users/rene/Desktop/ordner/FreireCapital/QUANT/Python Codes and Data/kentdaniel.py",
+		"/Users/rene/Desktop/ordner/FreireCapital/QUANT/Python Codes and Data/indexArb.py",
+		"/Users/rene/Desktop/ordner/FreireCapital/QUANT/Python Codes and Data/estimateFuturesReturns.py",
+		"/Users/rene/Desktop/ordner/FreireCapital/QUANT/Python Codes and Data/bog.py",
+		"/Users/rene/Desktop/ordner/FreireCapital/QUANT/Python Codes and Data/bollinger.py",
+		"/Users/rene/Downloads/MetaTrader5-5.0.9/src/Connector/MT5Connector.cpp",
+		"/Users/rene/Downloads/MetaTrader5-5.0.9/src/Interprocess/InterClient.cpp",
+		"/Users/rene/Downloads/MetaTrader5-5.0.9/src/MetaTrader.cpp",
+		"/Users/rene/Downloads/MetaTrader5-5.0.9/setup.py",
+		"/Users/rene/Desktop/ordner/FreireCapital/QUANT/mtclient-linear.cpp",
+		"/Users/rene/Desktop/ordner/FreireCapital/QUANT/mt5data.py",
+		"/Users/rene/Downloads/MetaTrader5-5.0.9/MetaTrader5/__init__.py",
+		"/Users/rene/Desktop/ordner/FreireCapital/QUANT/mtserver.py",
+		"/Users/rene/Downloads/YGMA.mq5",
+		"/Users/rene/Desktop/ordner/FreireCapital/QUANT/Algos/MT5/Alpen.cpp",
+		"/Users/rene/Desktop/ordner/FreireCapital/QUANT/Algos/MT5/bollinger-adx.cpp",
+		"/Users/rene/Desktop/ordner/FreireCapital/QUANT/Python Codes and Data/calculateMaxDD.py",
+		"/Users/rene/Desktop/ordner/FreireCapital/QUANT/Python Codes and Data/monteCarloOptimLeverage.py",
+		"/Users/rene/Desktop/ordner/FreireCapital/QUANT/Python Codes and Data/stationaryTests.py",
+		"/Users/rene/Desktop/ordner/314digital.github.io/_includes/header.html",
+		"/Users/rene/Desktop/ordner/314digital.github.io/_includes/head.html",
+		"/Users/rene/Desktop/ordner/314digital.github.io/_config.yml",
+		"/Users/rene/Desktop/ordner/314digital.github.io/_includes/tiles.html",
+		"/Users/rene/Desktop/ordner/314digital.github.io/landing.md",
+		"/Users/rene/Desktop/ordner/314digital.github.io/02agencia.md",
+		"/Users/rene/Desktop/ordner/314digital.github.io/generic.md",
+		"/Users/rene/Desktop/ordner/314digital.github.io/elements.md",
+		"/Users/rene/Desktop/ordner/FreireCapital/QUANT/Algos/MT5/3. Laegern/laegern-stoch.cpp",
+		"/Users/rene/Desktop/ordner/FreireCapital/QUANT/Algos/MT5/adx-tendencia.cpp",
+		"/Users/rene/Desktop/ordner/FreireCapital/QUANT/Algos/MT5/MACross-Example.cpp",
+		"/Users/rene/Desktop/ordner/FreireCapital/QUANT/Algos/MT5/untitled.cpp",
+		"/Users/rene/Desktop/ordner/FreireCapital/QUANT/Algos/MT5/1.cpp",
+		"/Users/rene/Desktop/ordner/FreireCapital/QUANT/Algos/MT5/test-3ema.cpp",
+		"/Users/rene/Desktop/ordner/FreireCapital/QUANT/Algos/MT5/macd-sample.cpp",
+		"/Users/rene/Downloads/untitled.py",
+		"/Users/rene/Desktop/ordner/freirerene.github.io-master/_posts/2019-10-07-apple.md",
+		"/Users/rene/Desktop/ordner/freirerene.github.io-master/_layouts/post.html",
+		"/Users/rene/Desktop/ordner/freirerene.github.io-master/_layouts/default.html",
+		"/Users/rene/Downloads/foto.svg",
+		"/Users/rene/Desktop/ordner/FreireCapital/MT5/macd_histogram_mc.mq5",
+		"/Users/rene/Desktop/ordner/FreireCapital/QUANT/Python Codes and Data/Ratio.py",
+		"/Users/rene/Desktop/ordner/FreireCapital/QUANT/Python Codes and Data/TU_mom.py",
+		"/Users/rene/Desktop/ordner/FreireCapital/QUANT/Python Codes and Data/TU_mom_hypothesisTest.py",
+		"/Users/rene/Desktop/ordner/FreireCapital/QUANT/Python Codes and Data/AUDCAD_daily.py"
+	],
+	"find":
+	{
+		"height": 29.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 41.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 186.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

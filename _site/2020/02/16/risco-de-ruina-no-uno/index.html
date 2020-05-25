@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<title>Risco de Ruína no Uno — Freire</title>
+		
+		
+
+		<link rel="stylesheet" href="/css/main.css" />
+		<link rel="stylesheet" href="/css/dark-mode.css">
+		<script src="https://kit.fontawesome.com/de688c0067.js" crossorigin="anonymous"></script>
+		<script src="/js/scroll.js"></script>
+		
+
+		<meta name="keywords" content=""/>
+		<meta charset="utf-8">
+
+		<link rel="shortcut icon" type="image/png" href="/img/ffrak.svg"/>
+
+
+		<meta content="Freire" />
+
+		
+		  
+
+
+
+
+
+
+		
+
+
+		
+		<meta content="Risco de Ruína no Uno"  />
+		
+
+		
+		<meta content="article" />
+		
+
+		
+		<meta content="E se a gente tornasse isso interessante?" />
+		<meta property="twitter:description" content="E se a gente tornasse isso interessante?" />
+		<meta content="E se a gente tornasse isso interessante?"  />
+		
+
+		
+		<meta content="http://localhost:4000/2020/02/16/risco-de-ruina-no-uno/" />
+		
+
+		
+		<meta content="http://localhost:4000/contact" property="article:author" />
+
+
+		
+
+		<meta name="author" content="Rene Freire" />
+
+		
+		
+		
+		
+
+		<style>
+	  		#darkSwitch { display: none; }
+
+	  		.pull-left { float: left!important; }
+
+	  		.pull-right { float: right!important; }
+
+	  		#title { margin: 0 0 0rem 0; }
+
+  			i.fab:hover {
+   				 color: #5183f5;
+  			}
+
+  			.dark  i.fab:hover {
+   				 color: #ffd479;
+  			}
+
+		</style>
+
+
+
+	</head>
+	<body>
+			<div class="___gatsby">
+				<div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper">
+					
+			<nav class="nav">
+                <div class="nav-container" id="navbar">
+                    <div class="brand">
+                        <a aria-current="page" class="" href="/">
+                             <h1 id="title">Freire</h1>
+                        </a>
+                    </div>
+                    <div class="links">
+                        <a href="/blog/">Articles</a>
+                        <a href="/contact/">Contact</a>
+                    </div>
+                    <div class="cta">
+							<input type="checkbox" id="darkSwitch">
+							<label for="darkSwitch">
+  									<img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTI4IDEyODsiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogIDxwYXRoIGQ9Ik0xMDUuODcsMTQuOTljLTMuNzQtMy4zOS03LjkxLTYuMzgtMTIuNDItOC44OWMtMC44Ny0wLjQ5LTItMC4zNS0yLjcxLDAuMzMgYy0wLjcxLDAuNjgtMC44MywxLjczLTAuMjksMi41M2MxNS42MywyMi45MywxMi4yOSw1Mi41Mi04LjExLDcxLjk3Yy0xMS45LDExLjM1LTI3Ljg1LDE3LjYtNDQuOTEsMTcuNiBjLTExLjM5LDAtMjIuNTQtMi44Ni0zMi4yNC04LjI3Yy0wLjg3LTAuNDktMi0wLjM2LTIuNzEsMC4zM2MtMC43MSwwLjY4LTAuODMsMS43Mi0wLjI4LDIuNTNjMi44MSw0LjEyLDYuMTIsNy45Myw5Ljg2LDExLjMyIGMxMi42MSwxMS40NSwyOS4yNywxNy43Niw0Ni45LDE3Ljc2YzE4LjI3LDAsMzUuMzQtNi43LDQ4LjA5LTE4Ljg2YzEyLjUzLTExLjk0LDE5LjMxLTI3LjcxLDE5LjA5LTQ0LjQgQzEyNS45Miw0Mi4yNSwxMTguNzIsMjYuNjQsMTA1Ljg3LDE0Ljk5eiIgc3R5bGU9ImZpbGw6I0ZDQzIxQjsiLz4KPC9zdmc+" class="theme-icon" />
+							</label>   
+                        <script src="/js/dark-mode-switch.min.js"></script>
+                    </div>
+                </div>
+            </nav>
+
+
+
+<main id="main-content">
+                <div class="container">
+                    <div>
+                        <div class="elevator">
+				<div id="post">
+
+	
+
+	
+
+	<div class="page">
+		<h2>Risco de Ruína no Uno</h2>
+
+		<p>Um dia desses eu me vi numa situação: jogando uno com outras três pessoas.</p>
+
+<p>Não estava valendo nada, mas depois eu pensei: e se estivesse valendo? Qual o risco de ruína num jogo de uno com, digamos, <code class="highlighter-rouge">50</code> partidas?</p>
+
+<p>Vamos aplicar <a href="https://freire.ch/2019/12/15/monte-carlo-drawdown/">Monte Carlo</a>, claro. (com algumas suposições iniciais ingênuas)</p>
+
+<p>Digamos que cada pessoa que perde dá ao vencedor <code class="highlighter-rouge">1</code> de uma unidade de dinheiro (e.g., um real).  E digamos que cada um tem uma chance igual de vitoria.</p>
+
+<p>Então, a taxa retorno por risco é <code class="highlighter-rouge">3</code> e a probabilidade de ganho é de <code class="highlighter-rouge">25%</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">montecarlo</span> <span class="o">=</span> <span class="p">[[</span><span class="n">rr</span> <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">50</span><span class="p">)[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">winrate</span> <span class="k">else</span> <span class="o">-</span><span class="mi">1</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">50</span><span class="o">-</span><span class="mi">1</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1000</span><span class="p">)]</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">montecarlo</span><span class="p">)</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="nb">sum</span><span class="p">())</span>
+
+<span class="n">loss</span> <span class="o">=</span> <span class="n">res</span><span class="p">[</span><span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">gain</span> <span class="o">=</span> <span class="n">res</span><span class="p">[</span><span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span>
+
+</code></pre></div></div>
+
+<p><img src="/img/uno.png" alt="" /></p>
+
+<p>As chances de vitória são de apenas <code class="highlighter-rouge">43%</code>. A média de ganho é de ca. <code class="highlighter-rouge">11</code> unidades e a de perda é de ca. <code class="highlighter-rouge">8</code> unidades. O ganho máximo é de <code class="highlighter-rouge">40</code> e a perda máxima de <code class="highlighter-rouge">-32</code>.</p>
+
+<p>Os resultados ficam muito melhores se o jogador tem um <em>edge</em> de <code class="highlighter-rouge">5%</code>: suas chances de vitória passam pra <code class="highlighter-rouge">70%</code>, com: ganho médio <code class="highlighter-rouge">15</code>; ganho máximo <code class="highlighter-rouge">48</code>; perda média <code class="highlighter-rouge">-6</code> e perda máxima <code class="highlighter-rouge">-28</code>.</p>
+
+
+
+	<div> 
+		<div>&nbsp;</div> 
+		<div class="pull-left"> 
+			 
+			<a href="/2020/02/10/an-image-II/" title="Previous Post: 
+				An Image II — The weirdest Ideology"><i class="fas fa-arrow-circle-left"></i> An Image II — The weirdest Ideology</a> 
+			 
+		</div> 
+
+		<div class="pull-right"> 
+			 
+			<a href="/2020/02/23/a-quote-v/" title="next Post: 
+				A Quote V — Old Deep Work">A Quote V — Old Deep Work  <i class="fas fa-arrow-circle-right"></i></a> 
+			 
+		</div> 
+		<div>&nbsp;</div> 
+	</div> 
+
+	<div id="footer" >
+		<div class="pull-right">
+			<span>[
+  
+    
+    
+    <a href="/tag/🐍">🐍&nbsp;</a>
+  
+    
+    
+    <a href="/tag/🤡">🤡&nbsp;</a>
+  
+]</span>
+		</div>
+		Published by 
+		<span itemprop="author">
+			Rene Freire
+		</span>
+		— 
+		<time datetime="2020-02-16T06:00:00-03:00">16 Feb 2020</time>
+	</div>
+	</div>
+
+</div>
+
+			</div>
+		</div>
+	</div>
+
+
+</main>
+<footer class="footer container"><div>
+	<a href="https://twitter.com/rene__f" title="Twitter"><i class="fab fa-twitter fa-lg"></i></a>
+
+	<a href="https://github.com/freirerene" title="Github"><i class="fab fa-github fa-lg"></i></a>
+
+	<a href="http://www.linkedin.com/in/freire00" title="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a>
+
+				</div></footer>
+			
+
+
+
+		</div>
+
+	</body>
+</html>

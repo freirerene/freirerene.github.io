@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<title>Hurst I — Freire</title>
+		
+		
+
+		<link rel="stylesheet" href="/css/main.css" />
+		<link rel="stylesheet" href="/css/dark-mode.css">
+		<script src="https://kit.fontawesome.com/de688c0067.js" crossorigin="anonymous"></script>
+		<script src="/js/scroll.js"></script>
+		
+
+		<meta name="keywords" content=""/>
+		<meta charset="utf-8">
+
+		<link rel="shortcut icon" type="image/png" href="/img/ffrak.svg"/>
+
+
+		<meta content="Freire" />
+
+		
+		  
+
+
+
+
+
+
+		
+
+
+		
+		<meta content="Hurst I"  />
+		
+
+		
+		<meta content="article" />
+		
+
+		
+		<meta content="First part of the calculation of Hurst exponent." />
+		<meta property="twitter:description" content="First part of the calculation of Hurst exponent." />
+		<meta content="First part of the calculation of Hurst exponent."  />
+		
+
+		
+		<meta content="http://localhost:4000/2019/10/20/hurst-I/" />
+		
+
+		
+		<meta content="http://localhost:4000/contact" property="article:author" />
+
+
+		
+
+		<meta name="author" content="Rene Freire" />
+
+		
+		
+		
+		
+
+		<style>
+	  		#darkSwitch { display: none; }
+
+	  		.pull-left { float: left!important; }
+
+	  		.pull-right { float: right!important; }
+
+	  		#title { margin: 0 0 0rem 0; }
+
+  			i.fab:hover {
+   				 color: #5183f5;
+  			}
+
+  			.dark  i.fab:hover {
+   				 color: #ffd479;
+  			}
+
+		</style>
+
+
+
+	</head>
+	<body>
+			<div class="___gatsby">
+				<div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper">
+					
+			<nav class="nav">
+                <div class="nav-container" id="navbar">
+                    <div class="brand">
+                        <a aria-current="page" class="" href="/">
+                             <h1 id="title">Freire</h1>
+                        </a>
+                    </div>
+                    <div class="links">
+                        <a href="/blog/">Articles</a>
+                        <a href="/contact/">Contact</a>
+                    </div>
+                    <div class="cta">
+							<input type="checkbox" id="darkSwitch">
+							<label for="darkSwitch">
+  									<img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTI4IDEyODsiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogIDxwYXRoIGQ9Ik0xMDUuODcsMTQuOTljLTMuNzQtMy4zOS03LjkxLTYuMzgtMTIuNDItOC44OWMtMC44Ny0wLjQ5LTItMC4zNS0yLjcxLDAuMzMgYy0wLjcxLDAuNjgtMC44MywxLjczLTAuMjksMi41M2MxNS42MywyMi45MywxMi4yOSw1Mi41Mi04LjExLDcxLjk3Yy0xMS45LDExLjM1LTI3Ljg1LDE3LjYtNDQuOTEsMTcuNiBjLTExLjM5LDAtMjIuNTQtMi44Ni0zMi4yNC04LjI3Yy0wLjg3LTAuNDktMi0wLjM2LTIuNzEsMC4zM2MtMC43MSwwLjY4LTAuODMsMS43Mi0wLjI4LDIuNTNjMi44MSw0LjEyLDYuMTIsNy45Myw5Ljg2LDExLjMyIGMxMi42MSwxMS40NSwyOS4yNywxNy43Niw0Ni45LDE3Ljc2YzE4LjI3LDAsMzUuMzQtNi43LDQ4LjA5LTE4Ljg2YzEyLjUzLTExLjk0LDE5LjMxLTI3LjcxLDE5LjA5LTQ0LjQgQzEyNS45Miw0Mi4yNSwxMTguNzIsMjYuNjQsMTA1Ljg3LDE0Ljk5eiIgc3R5bGU9ImZpbGw6I0ZDQzIxQjsiLz4KPC9zdmc+" class="theme-icon" />
+							</label>   
+                        <script src="/js/dark-mode-switch.min.js"></script>
+                    </div>
+                </div>
+            </nav>
+
+
+
+<main id="main-content">
+                <div class="container">
+                    <div>
+                        <div class="elevator">
+				<div id="post">
+
+	
+
+	
+
+	<div class="page">
+		<h2>Hurst I</h2>
+
+		<p>There is this statistical measure called the Hurst exponent; it tells us how much a time series (say, for instance, a series of prices of a financial instrument) is mean reverting or not.</p>
+
+<p>What t is, essentially, is a measure of how the series diffuses from an initial value.</p>
+
+<p>Why am I talking about this? Well, the other day I was messing around with time series and I needed it. In python. Of course, there are some packages out there that calculate it, so I’m not doing anything revolutionary by programming my own Hurst exponent calculator.</p>
+
+<p>But I thought it could be a fun little project.</p>
+
+<p>There are some methods of calculating the Hurst exponent, but the one I find the best (most efficient and easy, and, in one sense, less arbitrary) is the one described by E. P. Chan <a href="http://epchan.blogspot.com/2016/04/mean-reversion-momentum-and-volatility.html">here</a>.</p>
+
+<p>First I’ll describe the theorem then, next week in the next post, I’ll explain how I programmed it and applied it to a particular case.</p>
+
+<h3 id="description">Description</h3>
+
+<p>Suppose you have a time series <code class="highlighter-rouge">z = (z_i)_{i=1,…,N}</code>, then for <code class="highlighter-rouge">t in T</code>, where <code class="highlighter-rouge">T = {1, …, n}</code> for <code class="highlighter-rouge">n &lt; N</code> ,we calculate</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Var(t) = var(|x_{i+t} - x_i|),
+</code></pre></div></div>
+
+<p>where the variance <code class="highlighter-rouge">var</code> is over the <code class="highlighter-rouge">i</code> and <code class="highlighter-rouge">t in T</code> is an arbitrary lag.</p>
+
+<p><code class="highlighter-rouge">Var(t)</code> should obey the following power law:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Var(t) ~ t^{2H},
+</code></pre></div></div>
+
+<p>where <code class="highlighter-rouge">H</code> is the Hurst exponent.</p>
+
+<p>The interpretation of <code class="highlighter-rouge">H</code> is the following: if <code class="highlighter-rouge">H &lt; 0.5</code> the time series is mean reverting; if <code class="highlighter-rouge">H = 0.5</code> the time series is a Brownian motion; and if <code class="highlighter-rouge">H &gt; 0.5</code> the time series is trending.</p>
+
+
+	<div> 
+		<div>&nbsp;</div> 
+		<div class="pull-left"> 
+			 
+			<a href="/2019/10/13/bereitschaftspotential/" title="Previous Post: 
+				Bereitschaftspotential"><i class="fas fa-arrow-circle-left"></i> Bereitschaftspotential</a> 
+			 
+		</div> 
+
+		<div class="pull-right"> 
+			 
+			<a href="/2019/10/27/hurst-II/" title="next Post: 
+				Hurst II">Hurst II  <i class="fas fa-arrow-circle-right"></i></a> 
+			 
+		</div> 
+		<div>&nbsp;</div> 
+	</div> 
+
+	<div id="footer" >
+		<div class="pull-right">
+			<span>[
+  
+    
+    
+    <a href="/tag/🐍">🐍&nbsp;</a>
+  
+    
+    
+    <a href="/tag/💰">💰&nbsp;</a>
+  
+]</span>
+		</div>
+		Published by 
+		<span itemprop="author">
+			Rene Freire
+		</span>
+		— 
+		<time datetime="2019-10-20T09:00:00-03:00">20 Oct 2019</time>
+	</div>
+	</div>
+
+</div>
+
+			</div>
+		</div>
+	</div>
+
+
+</main>
+<footer class="footer container"><div>
+	<a href="https://twitter.com/rene__f" title="Twitter"><i class="fab fa-twitter fa-lg"></i></a>
+
+	<a href="https://github.com/freirerene" title="Github"><i class="fab fa-github fa-lg"></i></a>
+
+	<a href="http://www.linkedin.com/in/freire00" title="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a>
+
+				</div></footer>
+			
+
+
+
+		</div>
+
+	</body>
+</html>

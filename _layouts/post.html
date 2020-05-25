@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+<div id="post">
+
+	{% if page.media %}
+		{{ page.media }}
+	{% endif %}
+
+	
+
+	<div class="page">
+		<h2>{{ page.title }}</h2>
+
+		{{ content }}
+
+	<div> 
+		<div>&nbsp;</div> 
+		<div class="pull-left"> 
+			{% if page.previous.url %} 
+			<a href="{{page.previous.url}}" title="Previous Post: 
+				{{page.previous.title}}"><i class="fas fa-arrow-circle-left"></i> {{page.previous.title}}</a> 
+			{% endif %} 
+		</div> 
+
+		<div class="pull-right"> 
+			{% if page.next.url %} 
+			<a href="{{page.next.url}}" title="next Post: 
+				{{page.next.title}}">{{page.next.title}}  <i class="fas fa-arrow-circle-right"></i></a> 
+			{% endif %} 
+		</div> 
+		<div>&nbsp;</div> 
+	</div> 
+
+	<div id="footer" >
+		<div class="pull-right">
+			<span>[
+  {% for tag in page.tags %}
+    {% capture tag_name %}{{ tag }}{% endcapture %}
+    
+    <a href="/tag/{{ tag_name }}">{{ tag_name }}&nbsp;</a>
+  {% endfor %}
+]</span>
+		</div>
+		Published by 
+		<span itemprop="author">
+			Rene Freire
+		</span>
+		— 
+		<time datetime="{{ page.date | date_to_xmlschema}}">{{ page.date | date_to_string }}</time>
+	</div>
+	</div>
+
+</div>

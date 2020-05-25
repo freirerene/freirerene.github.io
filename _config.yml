@@ -1,0 +1,16 @@
+url: freire.ch
+markdown: kramdown
+base_url: /
+relative_permalinks: false
+title: Freire
+description: "Freire"
+exclude: [".rvmrc", ".rbenv-version", "README", "Rakefile", "changelog.md", "sass_converter.rb", "Gemfile", "Gemfile.lock", ".tm_properties", "config.rb", "sass", "CNAME", "Procfile", "Vagrantfile", "s3_website.yml", "Guardfile"]
+permalink: /:year/:month/:day/:title/
+toplinks: ['articles', 'contact']
+
+sass:
+  sass_dir: _sass
+  style: compact
+
+plugins:
+  - jemoji
