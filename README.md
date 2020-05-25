@@ -1,4 +1,4 @@
-This is the source of my personal website. Its style is based on [Tania's website](https://www.taniarascia.com) (which is great), and its skeleton is based on my [previous website](https://github.com/freirerene/freirerene.github.io-old), which was, in its turn, based on [Fabien Penso](http://blog.penso.info)'s blog.
+This is the source of my personal website. Its style is based on [Tania's website](https://www.taniarascia.com) (which is great), and its skeleton is based on my [previous website](https://github.com/freirerene/freirerene.github.io-old), which was, in turn, based on [Fabien Penso](http://blog.penso.info)'s blog.
 
 All of its eventual defects, however, are not theirs, of course.
 
