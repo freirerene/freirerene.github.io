@@ -1,7 +1,7 @@
 --- 
 layout: post
 title: Tao te ozark
-tags : 🤷🏻‍♂️, 📚, 📺 
+tags : 🤷🏻‍♂️ 📚 📺 
 date: 2021-01-20 10:00:00.000000000 +01:00
 description: wut
 ---
