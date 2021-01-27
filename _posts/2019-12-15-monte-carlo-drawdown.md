@@ -25,38 +25,36 @@ import matplotlib.pyplot as plt
 import math
 import random
 
-file_data = “trades2.csv”
-trades = pd.read_csv(file_data)
-
-cumulativo = trades.results.cumsum()
-
+returns = pd.read_csv('return.csv')
+cumulativo = returns['Return'].cumsum()
 plt.plot(cumulativo)
 ```
 
 
-![](/img/trades.png)
+![](/img/returns.png)
 
 Then I find out the basic assumptions of this strategy:
 
 ```python
-loss = pd.DataFrame(list(filter(lambda x: x <= 0, trades.results)))
-gain = pd.DataFrame(list(filter(lambda x: x > 0, trades.results)))
+loss = returns[returns['Return'] <= 0]
+profit = returns[returns['Return'] > 0]
 
-winrate = round((len(gain)/(len(gain)+len(loss))),2)
+winrate = round((len(profit)/(len(profit)+len(loss))),2)
 lossrate = 1 - winrate
 
-rr = round(-gain.mean()/loss.mean(),2)[0]
+rr = round(-profit.mean()/loss.mean(),2)[0]
 ```
 
 And here is where I generate the possible results (notice I normalize the possible outcome: so the loss is -1 and the gain is `rr`)
 
 ```python
-montecarlo = [[rr if np.random.uniform(0,1,len(trades))[j] <= winrate else -1 for j in range(1,len(trades)-1)] for i in range(1,1000)]
+montecarlo = [[rr if np.random.uniform(0,1,len(returns))[j] <= winrate else -1 for j in range(1,len(returns)-1)] for i in range(1,1000)]
 
 result = pd.DataFrame(montecarlo).transpose()
 
+
 plt.subplots(figsize=(10,7))
-plt.axhline(y=0,linewidth=1, color=‘#000000’)
+plt.axhline(y=0,linewidth=1, color='#000000')
 plt.plot(result.cumsum(), alpha = 0.5)
 plt.show()
 ```
@@ -77,4 +75,4 @@ maxdd.mean()
 maxdd.quantile(.95)
 ```
 
-Mean DD is about 11 and maximum DD is about 19. One might say this is not a good strategy, but one has to consider other factors as well.
+Mean DD is about 46.7 and maximum DD is about 73.4.
