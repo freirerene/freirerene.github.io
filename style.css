@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'TX02';
+    src: url('TX02-Regular.woff2') format('woff2'),
+        url('TX02-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
