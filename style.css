@@ -1,14 +1,87 @@
-@media (max-width: 600px) {
-    body {
-        font-size: 0.3em; /* Diminui a fonte para telas menores */
-    }
-}
 
 @font-face {
-    font-family: "TX02";
+    font-family: "MyFont";
     src:
-        url("TX02-Regular.woff2") format("woff2"),
-        url("TX02-Regular.woff") format("woff");
+        url("MyFont.woff2") format("woff2"),
     font-weight: normal;
     font-style: normal;
+}
+
+:root {
+    --bg-color: #000;
+    --text-color: #fff;
+    --link-color: #fff;
+    --border-width: 4px;
+    --link-hover-color: #ef6300;
+ }
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg-color: #fff;
+        --text-color: #000;
+        --link-color: #000;
+        --link-hover-color: #ffb700;
+    }
+ }
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: "MyFont", monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.block {
+    width: 100%;
+    border: var(--border-width) solid var(--text-color);
+    padding: 1em;
+    border-radius: 0;
+    box-sizing: border-box;
+}
+
+.name-block {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    font-size: 2em;
+    font-weight: bold;
+    gap: 0.5em;
+}
+
+.profile-pic {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+}
+
+.info-block {
+    text-align: left;
+    font-size: 1.5em;
+}
+
+.contact-block {
+    text-align: left;
+    font-size: 1.5em;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: underline;
+}
+
+a:hover {
+    background-color: var(--link-hover-color);
 }
